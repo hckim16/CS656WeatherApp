@@ -1,17 +1,31 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Today's Weather</ion-title>
+    <button ion-button float-right [navPush]="geotendayPage">10 Day</button>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content padding class="bg-image">
+  
+    <ion-grid *ngIf="weather">
+      <ion-row>
+        <ion-col width-50 offset-25>
+          <h1 class="location">{{weather.display_location.full}}</h1>
+          <div class="icon"><img src="{{weather.icon_url}}" alt=""></div>
+          <h2 class="desc">{{weather.weather}}</h2>
+          <h1 class="temp">{{weather.temp_f}}&deg;</h1>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-list>
+              <h3><strong>Temp: </strong> {{weather.temperature_string}}</h3>
+              <h3><strong>Relative Humidtiy: </strong> {{weather.relative_humidity}}</h3>
+              <h3><strong>Feels Like: </strong> {{weather.feelslike_string}}</h3>
+              <h3><strong>Visibility (Miles): </strong> {{weather.visibility_mi}}</h3>
+              <h3><strong>Local Time: </strong> {{weather.local_time_rfc822}}</h3>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 </ion-content>
