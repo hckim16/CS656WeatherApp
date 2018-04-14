@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams  } from 'ionic-angular';
 import { WeatherProvider } from '../../providers/weather/weather';
 import { Storage } from '@ionic/storage';
 import { TendayresultPage } from '../tendayresult/tendayresult';
+import { LookuphourlyPage } from '../lookuphourly/lookuphourly';
 
 @Component({
   selector: 'page-result',
@@ -17,6 +18,7 @@ export class ResultPage {
   }
   
   tendayresultPage = TendayresultPage;
+  lookuphourlyPage = LookuphourlyPage;
 
   constructor(
     public navCtrl: NavController, 

@@ -5,7 +5,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="bg-image">
+<ion-content padding class="bg-image home">
   
     <ion-grid *ngIf="weather">
       <ion-row>
@@ -16,6 +16,9 @@
           <h1 class="temp">{{weather.temp_f}}&deg;</h1>
         </ion-col>
       </ion-row>
+      <ion-fab>
+        <button ion-fab color="primary" large [navPush]="lookuphourlyPage">Hourly</button>
+      </ion-fab>
       <ion-row>
         <ion-col>
           <ion-list>

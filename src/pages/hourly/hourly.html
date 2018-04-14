@@ -1,0 +1,20 @@
+
+
+<ion-header>
+    <ion-navbar>
+      <ion-grid *ngIf="weather">
+        <ion-title>{{weather.display_location.full}}</ion-title>
+      </ion-grid>
+    </ion-navbar>
+  </ion-header>
+    
+    <ion-content padding class="home">
+      <ion-grid>
+        <ion-title>Hourly Forecast</ion-title>
+      </ion-grid>
+      <ion-item *ngFor="let item of hourly">
+        <p>{{ item.temp.english }}</p>
+        <p><img src="{{ item.icon_url }}" alt=""></p>
+        <p>{{ item.condition }}</p>
+      </ion-item>
+    </ion-content>

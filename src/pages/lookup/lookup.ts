@@ -26,8 +26,8 @@ export class LookupPage {
           this.state = location.state;
           this.country = location.country;
         } else {
-          this.city = 'Miami';
-          this.state = 'FL';
+          this.city = 'Newark';
+          this.state = 'NJ';
           this.country = 'US';
         }
       });

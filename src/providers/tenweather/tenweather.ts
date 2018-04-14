@@ -9,7 +9,6 @@ export class TenweatherProvider {
   url; 
 
   constructor(public http: Http) {
-    console.log('Hello RainProvider Provider');
     this.url = 'https://api.wunderground.com/api/' + this.apiKey + '/forecast10day/q';
   }
 

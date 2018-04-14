@@ -6,11 +6,13 @@ import 'rxjs/add/operator/map';
 export class WeatherProvider {
   apiKey ='1cbdebe97d411844';
   url; 
+  url1
   url3; 
 
   constructor(public http: Http) {
     this.url = 'https://api.wunderground.com/api/' + this.apiKey + '/conditions/q';
-    this.url3 = 'https://api.wunderground.com/api/' + this.apiKey + '/animatedradar/animatedsatellite/q';
+    this.url1 = 'https://api.wunderground.com/api/' + this.apiKey + '/hourly/q';
+    this.url3 = 'https://api.wunderground.com/api/' + this.apiKey + '/radar/q';
   }
 
   getWeather(city, state){
@@ -19,7 +21,7 @@ export class WeatherProvider {
   }
 
   getRadar(city, state){
-    return this.http.get(this.url3 + '/' + state + '/' + city +'.gif?num=6&delay=50&interval=30');
+    return this.http.get(this.url3 + '/' + state + '/' + city +'.gif?width=280&height=280&newmaps=1');
   }
 
   getGeoLocation(latitude, longitude){

@@ -25,18 +25,6 @@ export class GeotendayPage {
     private weatherProvider: WeatherProvider,
     private tenweatherProvider: TenweatherProvider,
     private storage:Storage) {
-
-      this.storage.get('location').then((val) => {
-        if(val != null){
-          let location = JSON.parse(val);
-          this.city = location.city;
-          this.state = location.state;
-        } else {
-          this.city = 'Miami';
-          this.state = 'FL';
-        }
-      });
-
   }
 
   ionViewWillEnter(){
