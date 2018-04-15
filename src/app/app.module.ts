@@ -16,6 +16,8 @@ import { TendayresultPage } from '../pages/tendayresult/tendayresult';
 import { GeotendayPage } from '../pages/geotenday/geotenday';
 import { HourlyPage} from  '../pages/hourly/hourly';
 import { LookuphourlyPage} from  '../pages/lookuphourly/lookuphourly';
+import { MapPage } from '../pages/map/map';
+import { Map1Page } from '../pages/map1/map1';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -32,6 +34,8 @@ import { HourlyProvider } from '../providers/hourly/hourly';
     HourlyPage,
     LookuphourlyPage,
     LookupPage,
+    MapPage,
+    Map1Page,
     ResultPage,
     TabsPage,
     TendayPage,
@@ -53,6 +57,8 @@ import { HourlyProvider } from '../providers/hourly/hourly';
     HourlyPage,
     LookuphourlyPage,
     LookupPage,
+    MapPage,
+    Map1Page,
     ResultPage,
     TabsPage,
     TendayPage,

@@ -8,12 +8,13 @@
     </ion-navbar>
   </ion-header>
     
-    <ion-content padding class="home">
+    <ion-content padding class="bg-image">
       <ion-grid>
         <ion-title>Hourly Forecast</ion-title>
       </ion-grid>
       <ion-item *ngFor="let item of hourly">
-        <p>{{ item.temp.english }}</p>
+        <p>{{ item.FCTTIME.pretty}}</p>
+        <p>{{ item.temp.english }}&deg;</p>
         <p><img src="{{ item.icon_url }}" alt=""></p>
         <p>{{ item.condition }}</p>
       </ion-item>

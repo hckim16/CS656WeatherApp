@@ -4,6 +4,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 import { WeatherProvider } from '../../providers/weather/weather';
 import { GeotendayPage } from '../geotenday/geotenday';
 import { HourlyPage } from '../hourly/hourly';
+import { MapPage } from '../map/map';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient, HttpClientModule} from '@angular/common/http';
 
@@ -24,6 +25,7 @@ export class HomePage {
 
   geotendayPage = GeotendayPage;
   hourlyPage = HourlyPage;
+  mapPage = MapPage;
 
   constructor(
     public navCtrl: NavController,

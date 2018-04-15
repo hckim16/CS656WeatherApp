@@ -1,11 +1,18 @@
 <ion-header>
   <ion-navbar>
     <ion-title>Today's Weather</ion-title>
-    <button ion-button float-right [navPush]="geotendayPage">10 Day</button>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding class="bg-image home">
+  <ion-fab middle right edge>
+    <button ion-fab>Forecast</button>
+    <ion-fab-list>
+      <button ion-fab [navPush]="hourlyPage">Hourly</button>
+      <button ion-fab [navPush]="geotendayPage">10 Day</button>
+      <button ion-fab [navPush]="mapPage"><ion-icon name="map"></ion-icon></button>        
+    </ion-fab-list>
+  </ion-fab>
   
     <ion-grid *ngIf="weather">
       <ion-row>
@@ -16,9 +23,6 @@
           <h1 class="temp">{{weather.temp_f}}&deg;</h1>
         </ion-col>
       </ion-row>
-      <ion-fab>
-        <button ion-fab color="primary" large [navPush]="hourlyPage">Hourly</button>
-      </ion-fab>
       <ion-row>
         <ion-col>
           <ion-list>

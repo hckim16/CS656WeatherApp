@@ -28,6 +28,9 @@ $tab-md-tab-color-active: color($colors, light);
 $tab-md-tab-color-inactive: color($colors, dark);
 $tab-md-tab-text-color: color($colors, light);
 
+$fab-size: 65px;
+$fab-mini-size: 50px;
+
 @import "ionic.theme.default";
 
 

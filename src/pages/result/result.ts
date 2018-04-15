@@ -4,6 +4,7 @@ import { WeatherProvider } from '../../providers/weather/weather';
 import { Storage } from '@ionic/storage';
 import { TendayresultPage } from '../tendayresult/tendayresult';
 import { LookuphourlyPage } from '../lookuphourly/lookuphourly';
+import { Map1Page } from '../map1/map1';
 
 @Component({
   selector: 'page-result',
@@ -19,6 +20,7 @@ export class ResultPage {
   
   tendayresultPage = TendayresultPage;
   lookuphourlyPage = LookuphourlyPage;
+  map1Page = Map1Page;
 
   constructor(
     public navCtrl: NavController, 
