@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content padding class="bg-image home">
-  <ion-fab middle right edge>
+  <ion-fab top right edge>
     <button ion-fab>Forecast</button>
     <ion-fab-list>
       <button ion-fab [navPush]="hourlyPage">Hourly</button>
@@ -17,7 +17,8 @@
     <ion-grid *ngIf="weather">
       <ion-row>
         <ion-col width-50 offset-25>
-          <h1 class="location">{{weather.display_location.full}}</h1>
+          <h1 class="location">{{weather.display_location.city}}</h1>
+          <h1 class="location">{{weather.display_location.state}}</h1>
           <div class="icon"><img src="{{weather.icon_url}}" alt=""></div>
           <h2 class="desc">{{weather.weather}}</h2>
           <h1 class="temp">{{weather.temp_f}}&deg;</h1>
@@ -35,5 +36,6 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-    <div>{{ radar }}</div>
+    <div><img src="{{ radar }}" alt="" class="center"></div>
+    <div><img src="{{ aniradsat }}" alt="" class="center"></div>
   </ion-content>

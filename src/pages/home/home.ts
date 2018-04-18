@@ -20,7 +20,7 @@ export class HomePage {
   city: any;
   state: any;
   radar: any;
-  radar1: any;
+  aniradsat: any;
   
 
   geotendayPage = GeotendayPage;
@@ -49,10 +49,9 @@ export class HomePage {
         this.city = weather.current_observation.display_location.city;
         this.state = weather.current_observation.display_location.state;
 
-        this.radar = this.weatherProvider.getRadar(this.city,this.state);//.subscribe(radar =>{
-          //console.log(this.radar);
-          //this.radar;
-       // });
+        this.radar = "https://api.wunderground.com/api/1cbdebe97d411844/radar/q/" + this.state + "/" + this.city + ".gif?width=280&height=280&newmaps=1";
+
+        this.aniradsat = "https://api.wunderground.com/api/1cbdebe97d411844/animatedradar/animatedsatellite/q/" + this.state + "/" + this.city + ".gif?num=6&delay=50&interval=30"
       });
     }).catch((error) => {
        console.log('Error getting location', error);

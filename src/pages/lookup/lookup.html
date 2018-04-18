@@ -1,13 +1,13 @@
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar text-center>
     <ion-title>Look Up</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding class="bg-image">
+<ion-content padding class="bg-image home">
   <ion-grid>
     <ion-row>
       <ion-col width-100>
@@ -23,7 +23,7 @@
             </ion-item>
             <ion-item>
               <ion-label fixed>Country</ion-label>
-              <ion-input [(ngModel)]="country" name="countryç" type="text"></ion-input>
+              <ion-input [(ngModel)]="country" name="country" type="text"></ion-input>
             </ion-item>
             <button ion-button type="submit" block>Get Weather</button>
           </form>

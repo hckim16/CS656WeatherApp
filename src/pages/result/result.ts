@@ -17,6 +17,8 @@ export class ResultPage {
     city:string,
     state:string
   }
+  radar: any;
+  aniradsat: any;
   
   tendayresultPage = TendayresultPage;
   lookuphourlyPage = LookuphourlyPage;
@@ -44,6 +46,10 @@ export class ResultPage {
       this.weatherProvider.getWeather(this.location.city, this.location.state).subscribe(weather => {
         this.weather = weather.current_observation;
       });
+
+      this.radar = "https://api.wunderground.com/api/1cbdebe97d411844/radar/q/" + this.location.state + "/" + this.location.city + ".gif?width=280&height=280&newmaps=1";
+
+      this.aniradsat = "https://api.wunderground.com/api/1cbdebe97d411844/animatedradar/animatedsatellite/q/" + this.location.state + "/" + this.location.city + ".gif?num=6&delay=50&interval=30"
     });
   }
 }

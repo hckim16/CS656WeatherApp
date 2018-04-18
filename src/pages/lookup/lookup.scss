@@ -1,8 +1,10 @@
 page-lookup {
     .bg-image{
         background-image: url('../assets/imgs/meadow.jpeg');
-        background-size: 100%;
+        background-size: cover;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: center ;
+        height: 100%;
+        width: 100%;
     }
 }
