@@ -65,15 +65,15 @@ export class Map1Page {
         this.lat = weather.current_observation.display_location.latitude;
         this.long = weather.current_observation.display_location.longitude;
 
-        let latlng = new google.maps.LatLng(this.lat, this.long);
+        let pos = new google.maps.LatLng(this.lat, this.long);
       
         this.map1 = new google.maps.Map(document.getElementById('map1'), {
-          center: latlng,
+          center: pos,
           zoom: 12
         });
 
         this.marker = new google.maps.Marker({
-          position: latlng,
+          position: pos,
           map: this.map1
         })
       });

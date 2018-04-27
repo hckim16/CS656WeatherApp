@@ -41,9 +41,9 @@ export class MapPage {
   }
 
   ionViewDidLoad() {
-    this.geo.getCurrentPosition().then((resp) => {
-      this.lat = resp.coords.latitude;
-      this.long = resp.coords.longitude;
+    this.geo.getCurrentPosition().then((pos) => {
+      this.lat = pos.coords.latitude;
+      this.long = pos.coords.longitude;
 
       this.initMap();
     });
@@ -51,10 +51,10 @@ export class MapPage {
 
   initMap(){
 
-    let latlng = new google.maps.LatLng(this.lat, this.long);
+    let location = new google.maps.LatLng(this.lat, this.long);
     
     let mapOptions = {
-      center: latlng,
+      center: location,
       zoom: 12,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
@@ -62,7 +62,7 @@ export class MapPage {
     this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
 
     this.marker = new google.maps.Marker({
-      position: latlng,
+      position: location,
       map: this.map
     })
   }
