@@ -10,12 +10,12 @@
     <ion-grid>
       <ion-title>Hourly Forecast</ion-title>
     </ion-grid>
-      <ion-list>
-        <ion-item *ngFor="let item of hourly">
-          <p>{{ item.FCTTIME.pretty}}</p>
-          <p>{{ item.temp.english }}&deg;</p>
-          <p><img src="{{ item.icon_url }}" alt=""></p>
-          <p>{{ item.condition }}</p>
-        </ion-item>
-      </ion-list>
+    <ion-list *ngFor="let item of hourly">
+      <ion-item>
+        <p>{{ item.FCTTIME.pretty}}</p>
+        <p>{{ item.temp.english }}&deg;</p>
+        <p><img src="{{ item.icon_url }}" alt=""></p>
+        <p>{{ item.condition }}</p>
+      </ion-item>
+    </ion-list>
   </ion-content>
