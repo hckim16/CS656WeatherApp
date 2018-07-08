@@ -4,7 +4,7 @@ iOS Weather App is my latest, full scale project.  I call it full scale because
 
 This short Youtube clip demonstrates the Weather App on the iPhone SE:
 
-
+<iframe src="https://www.youtube.com/embed/3uRIe5w3rIw" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 Ionic Framework
 
